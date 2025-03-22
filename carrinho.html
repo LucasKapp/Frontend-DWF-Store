@@ -3,58 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Compras</title>
+    <meta name="description" content="Carrinho de compras da DWF Multistore. Finalize sua compra ou continue comprando.">
+    <title>Carrinho de Compras - DWF Multistore</title>
     <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <h1>DWF Multistore</h1>
         </div>
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
-                <li><a href="site.html">Home</a></li>
-                <li><a href="produto.html">Produtos</a></li>
-                <li><a href="login.html">Login/Cadastro</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="site.html" aria-label="Ir para a página inicial">Home</a></li>
+                <li><a href="produto.html" aria-label="Ver produtos">Produtos</a></li>
+                <li><a href="login.html" aria-label="Fazer login ou cadastro">Login/Cadastro</a></li>
+                <li><a href="carrinho.html" aria-label="Ver carrinho de compras">Carrinho</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="carrinho">
-        <h2>Seu Carrinho de Compras</h2>
-        <div id="carrinho-container">
-            <div class="carrinho-item">
-                <img src="mcqueen.png" alt="Mcqueen Carros">
-                <div class="carrinho-item-info">
-                    <h2>Mcqueen Carros</h2>
-                    <p>Preço: R$ 99,90</p>
+    <main class="main-content">
+        <section class="carrinho" aria-labelledby="carrinho-titulo">
+            <h2 id="carrinho-titulo">Seu Carrinho de Compras</h2>
+            <div id="carrinho-container">
+                <div class="carrinho-item">
+                    <img src="mcqueen.png" alt="Carro do McQueen, personagem do filme Carros">
+                    <div class="carrinho-item-info">
+                        <h2>Mcqueen Carros</h2>
+                        <p>Preço: R$ 99,90</p>
+                        <button class="remover-item" aria-label="Remover Mcqueen Carros do carrinho">Remover</button>
+                    </div>
+                </div>
+                <div class="carrinho-item">
+                    <img src="boneca.png" alt="Boneca infantil">
+                    <div class="carrinho-item-info">
+                        <h2>Boneca</h2>
+                        <p>Preço: R$ 79,90</p>
+                        <button class="remover-item" aria-label="Remover Boneca do carrinho">Remover</button>
+                    </div>
                 </div>
             </div>
-            <div class="carrinho-item">
-                <img src="boneca.png" alt="Boneca">
-                <div class="carrinho-item-info">
-                    <h2>Boneca</h2>
-                    <p>Preço: R$ 79,90</p>
+
+            <div class="total-container">
+                <div class="subtotal-box">
+                    <h3>Subtotal: R$ 179,80</h3>
+                </div>
+                <div class="button-container">
+                    <button onclick="window.location.href='pagamento.html'" aria-label="Finalizar compra">Finalizar Compra</button>
+                    <button onclick="window.location.href='site.html'" aria-label="Continuar comprando">Continuar Comprando</button>
                 </div>
             </div>
-        </div>
+        </section>
+    </main>
 
-        <div class="total-container">
-            <div class="subtotal-box">
-                <h3>Subtotal: R$ 179,80</h3>
-            </div>
-            <div class="button-container">
-                <!-- Alteração aqui para redirecionar para a página de pagamento -->
-                <button onclick="window.location.href='pagamento.html'">Finalizar Compra</button>
-                <button onclick="window.location.href='site.html'">Continuar Comprando</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 DWF Multistore - Todos os direitos reservados.</p>
+        <nav aria-label="Links úteis">
+            <ul>
+                <li><a href="politica-de-privacidade.html" aria-label="Política de privacidade">Política de Privacidade</a></li>
+                <li><a href="termos-de-uso.html" aria-label="Termos de uso">Termos de Uso</a></li>
+                <li><a href="contato.html" aria-label="Contato">Contato</a></li>
+            </ul>
+        </nav>
     </footer>
-
 </body>
 </html>
